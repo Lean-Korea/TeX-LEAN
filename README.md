@@ -3,11 +3,17 @@
 ## participants
 
 jcpaik
+
 seewoo5
+
 ByungHakHwang
+
 automorphy
+
 ychpark.ks
+
 chlee-0
+
 Ilkyoo
 
 ## meeting Dec 26
