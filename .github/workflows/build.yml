@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build Lean and TeX files
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - main
 
 concurrency: 
-  group: ${{ github.head_ref }}
+  group: build-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
