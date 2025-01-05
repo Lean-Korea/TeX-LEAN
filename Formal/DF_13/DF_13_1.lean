@@ -1,4 +1,7 @@
 import Mathlib.Algebra.Polynomial.Basic
+import Mathlib.Algebra.Polynomial.Degree.Definitions
+import Mathlib.Algebra.Polynomial.Eval.Defs
+import Mathlib.Data.Int.Cast.Lemmas
 import Mathlib.Data.ZMod.Basic
 import Mathlib.Algebra.Ring.Basic
 
