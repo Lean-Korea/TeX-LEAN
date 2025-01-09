@@ -29,5 +29,4 @@ noncomputable def charInnerProduct (χ₁ χ₂ : G → ℂ) : ℂ :=
   (1 / (Fintype.card G : ℂ)) * ∑ g : G, χ₁ g * conj (χ₂ g)
 
 theorem fixed_point_subspace_dim (V : FDRep ℂ G) :
-  Module.finrank ℂ (FixedPointSubspace V) = charInnerProduct V.character trivialChar := by
-  sorry
+  Module.finrank ℂ (FixedPointSubspace V) = charInnerProduct V.character trivialChar := sorry
