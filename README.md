@@ -1,4 +1,4 @@
-# Tex-LEAN
+# TeX-LEAN
 
 ## Requirements
 
