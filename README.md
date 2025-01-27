@@ -8,7 +8,7 @@
 
 ## How to contribute
 
-0. Run `lake build`.
+0. Run `lake exe cache get`.
 1. Make a new branch.
 
     ```
