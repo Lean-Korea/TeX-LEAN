@@ -1,5 +1,4 @@
 import Mathlib.RepresentationTheory.FDRep
-import Mathlib.GroupTheory.QuotientGroup.Basic
 
 variable {G : Type} [Group G] [Fintype G]
 variable {K : Type} [Field K]
