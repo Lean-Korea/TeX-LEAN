@@ -23,6 +23,10 @@ Prove that $\mathbb{Q}(\sqrt{2})$ and $\mathbb{Q}(\sqrt{3})$ are not isomorphic.
 Contributor: Yeachan Park
 -/
 
+
+noncomputable def poly2 : ℚ[X] := Polynomial.X^2 - 2
+noncomputable def poly3 : ℚ[X] := Polynomial.X^2 - 3
+
 abbrev Qsqrt2 := AdjoinRoot poly2
 lemma irreducible_poly2 : Irreducible poly2 :=
   sorry
