@@ -62,10 +62,10 @@
 
 ## Tips
 
+- If it is your first time doing Lean, then it may take some time. Feel free to ask any questions at [Lean in Korea Zulip](https://lean-in-korea.zulipchat.com/). 
 - Do NOT import the whole `Mathlib` in your final contribution as it wll take a lot of time to compile. Instead, you could either:
-  - Import the whole `Mathlib` then later write `#min_imports` 
-  - Instead, search (e.g. use [documentation](https://leanprover-community.github.io/mathlib4_docs/index.html)) and import specific files needed. Or you can write `#min_imports` at the bottom of the file and see the minimal imports that you need.
-- If it is your first time doing Lean, then it may take some time. Ask questions on [Lean in Korea Zulip](https://lean-in-korea.zulipchat.com/). 
+  - Import the whole `Mathlib` while working, then use `#min_imports` before commiting your work to minimize the imports.
+  - Search (e.g. use [documentation](https://leanprover-community.github.io/mathlib4_docs/index.html)) and import specific files needed.
 
 ## Admins
 
