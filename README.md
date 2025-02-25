@@ -2,39 +2,37 @@
 
 ## Requirements
 
-- Git
 - [Lean4](https://github.com/leanprover/lean4)
+- Git
 
 ## Installation
 
 - Use one of these to use **Lean 4**.
   - [Lean 4 Web](https://live.lean-lang.org/) requires no installation and can be used in web directly.
   - Or [install Lean 4](https://docs.lean-lang.org/lean4/doc/quickstart.html) locally.
+    - You will also need to install visual studio code to edit Lean 4 source.
 - Use **Git** to commit your Lean 4 work to this repository.
   - [Github Desktop](https://github.com/apps/desktop) is a user-friendly program that requires no command-line interactions.
   - Or install git locally and use it via command-line interactions.
 
 ## How to contribute
 
-0. Run `lake exe cache get`.
-1. Make a new branch.
+1. Clone this repository.
+2. If using local Lean 4 installation, run `lake exe cache get` at project root to get pre-compiled mathlib4 cache.
+3. Make a new branch.
 
     ```
     git checkout -b your_branch_name
     ```
 
-2. Write a lean file that formalizes a statement of an exercise.
-  - Name of each file must be of the form `DF_{Chapter}_{Section}_lean`.
-    - **One section for one lean file**. Make one if there is no such file.
-  - The file goes into the directory `Formal/DF_{Chapter}`.
-    - Make one if there is no such directory.
-  - Each file must contain a subset of formalized problems in the corresponding chapter.
-    - Each problem should be a `theorem` with name `DF_{Chapter}_{Section}_{Number}`.
-    - Write the natural language statement in LaTeX as a docstring right before the `theorem`.
-      - Add a line of `Contributor: <your name>` and separate the statement and this by two newlines.
+4. Write a lean file that formalizes a statement of an exercise.
+  - One directory for each chapter. The file goes into the directory `Formal/Chapter{number}`. Make one if it does not exist.
+  - One .lean file for each section. Name each file as `Formal/Chapter{number}/Section{number}`.
+      - e.g. `Formal/Chapter1/Section4.lean`
+  - One theorem for each problem. Each problem should be a `theorem` with name `DF_{Chapter}_{Section}_{Number}`.
 
     ```lean
-    def IsFinite (α : Type) : Prop :=
+    def DF_1_4_5_IsFinite (α : Type) : Prop :=
       ∃ elems : Finset α, ∀ a : α, a ∈ elems
 
     /--
@@ -47,36 +45,41 @@
         IsFinite (Matrix.GeneralLinearGroup (Fin n) k) ↔ IsFinite k := by
       sorry
     ```
+    - Write the natural language statement in LaTeX as a docstring right before the `theorem`.
+      - Add a line of `Contributor: <your name>` and separate the statement and this by two newlines.
+    - Any extra definitions or lemmas required for each problem can be made.
+      - Such definitions/lemmas should be prefixed with `DF_{Chapter}_{Section}_{Number}_` (including extra underline).
+      - Label all non-problem statement as a `lemma`.
 
-3. Import any newly created lean file to `Formal/DF.lean`:
+5. Import any newly created lean file to `Formal/DF.lean`:
 
     ```lean
-    import Formal.DF_{Chapter}.DF_{Chapter}_{Section}.lean
+    import Formal.Chapter1.Section4.lean
     ```
 
     Your lean file won't be checked by CI (Continuous Integration) if you miss this part.
 
-4. Add and commit.
+6. Add and commit.
 
     ```sh
     git add .
     git commit -m "your own commit message"
     ```
 
-5. Push to the remote (this GitHub repository)
+7. Push to the remote (this GitHub repository)
 
     ```sh
     git push --set-upstream origin your_branch_name
     ```
 
-6. Make a Pull Request, then you'll find that CI is running (build lean and tex files).
+8. Make a Pull Request, then you'll find that CI is running (build lean and tex files).
 
-7. After all CI pass and getting at least two approvements, one of the admins would merge your PR.
+9. After all CI pass and getting at least two approvements, one of the admins would merge your PR.
 
 ## Tips
 
 - If it is your first time doing Lean, then it may take some time. Feel free to ask any questions at [Lean in Korea Zulip](https://lean-in-korea.zulipchat.com/). 
-- Do NOT import the whole `Mathlib` in your final contribution as it wll take a lot of time to compile. Instead, you could either:
+- Do NOT import the whole `Mathlib` in your final commit as it wll take a lot of time to compile. Instead, you could either:
   - Import the whole `Mathlib` while working, then use `#min_imports` before commiting your work to minimize the imports.
   - Search (e.g. use [documentation](https://leanprover-community.github.io/mathlib4_docs/index.html)) and import specific files needed.
 
