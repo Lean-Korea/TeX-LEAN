@@ -4,7 +4,15 @@
 
 - Git
 - [Lean4](https://github.com/leanprover/lean4)
-- TeX
+
+## Installation
+
+- Use one of these to use **Lean 4**.
+  - [Lean 4 Web](https://live.lean-lang.org/) requires no installation and can be used in web directly.
+  - Or [install Lean 4](https://docs.lean-lang.org/lean4/doc/quickstart.html) locally.
+- Use **Git** to commit your Lean 4 work to this repository.
+  - [Github Desktop](https://github.com/apps/desktop) is a user-friendly program that requires no command-line interactions.
+  - Or install git locally and use it via command-line interactions.
 
 ## How to contribute
 
