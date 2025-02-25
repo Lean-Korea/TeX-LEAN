@@ -43,7 +43,11 @@ noncomputable def charInnerProduct (χ₁ χ₂ : G → ℂ) : ℂ :=
   (1 / (Fintype.card G : ℂ)) * ∑ g : G, χ₁ g * conj (χ₂ g)
 
 /--
-???
+Let $G$ be a finite group.
+Let $\phi: G\rightarrow \GL(V)$ be a representation with character $\psi$ over $\CC$.
+Let $W$ be the subspace \( \{v\in V \mid \mbox{\( \phi(g)(v) = v  \) for all \( g\in G \)}\} \)
+of \( V \) fixed pointwise by all elements of \( G \). Prove that \( \dim W = (\psi, \chi_1) \),
+where \( \chi_1 \) is the principal character of \( G \).
 
 Contributor: Byung-Hak Hwang
 -/
