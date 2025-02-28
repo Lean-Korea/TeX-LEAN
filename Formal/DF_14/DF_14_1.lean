@@ -12,7 +12,7 @@ open scoped Polynomial
 DF_14_1_2 : Let $\tau$ be the map $\tau : \mathbb{C} \to \mathbb{C}$ defined by $\tau (a + bi) = a- bi$ (complex conjugation). Prove
 that $\tau$ is an automorphism of $\mathbb{C}$.
 
-Contributor: Yeachan Park
+Contributor : Yeachan Park
 -/
 def tau (z : ℂ) : ℂ := ⟨z.re, -z.im⟩
 theorem DF_14_1_2 : ∃ (φ : ℂ ≃+* ℂ), ∀ z : ℂ, φ z = tau z := sorry
@@ -21,16 +21,16 @@ theorem DF_14_1_2 : ∃ (φ : ℂ ≃+* ℂ), ∀ z : ℂ, φ z = tau z := sorry
 /--
 DF_14_1_4_1 : $X^2-2$ is irreducible.
 
-Contributor: Yeachan Park
+Contributor : Yeachan Park
 -/
 noncomputable def poly2 : ℚ[X] := Polynomial.X^2 - 2
 lemma DF_14_1_4_1 : Irreducible poly2 :=
   sorry
 
 /--
-DF_14_1_4_2: $X^2-3$ is irreducible.
+DF_14_1_4_2 : $X^2-3$ is irreducible.
 
-Contributor: Yeachan Park
+Contributor : Yeachan Park
 -/
 noncomputable def poly3 : ℚ[X] := Polynomial.X^2 - 3
 lemma DF_14_1_4_2 : Irreducible poly3 :=
@@ -38,9 +38,9 @@ lemma DF_14_1_4_2 : Irreducible poly3 :=
 
 
 /--
-DF_14_1_4: Prove that $\mathbb{Q}(\sqrt{2})$ and $\mathbb{Q}(\sqrt{3})$ are not isomorphic.
+DF_14_1_4 : Prove that $\mathbb{Q}(\sqrt{2})$ and $\mathbb{Q}(\sqrt{3})$ are not isomorphic.
 
-Contributor: Yeachan Park
+Contributor : Yeachan Park
 -/
 
 abbrev Qsqrt2 := AdjoinRoot poly2
