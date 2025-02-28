@@ -19,21 +19,21 @@ theorem DF_14_1_2 : ∃ (φ : ℂ ≃+* ℂ), ∀ z : ℂ, φ z = tau z := sorry
 
 
 /--
-DF_14_1_4_a: $X^2-2$ is irreducible.
+DF_14_1_4_1 : $X^2-2$ is irreducible.
 
 Contributor: Yeachan Park
 -/
 noncomputable def poly2 : ℚ[X] := Polynomial.X^2 - 2
-lemma irreducible_poly2 : Irreducible poly2 :=
+lemma DF_14_1_4_1 : Irreducible poly2 :=
   sorry
 
 /--
-DF_14_1_4_b: $X^2-3$ is irreducible.
-'
+DF_14_1_4_2: $X^2-3$ is irreducible.
+
 Contributor: Yeachan Park
 -/
 noncomputable def poly3 : ℚ[X] := Polynomial.X^2 - 3
-lemma irreducible_poly3 : Irreducible poly3 :=
+lemma DF_14_1_4_2 : Irreducible poly3 :=
   sorry
 
 
