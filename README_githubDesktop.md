@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Git
+- Git (Git Desktop)
 - [Lean4](https://github.com/leanprover/lean4)
 - TeX
 
@@ -38,7 +38,7 @@
     - Make one if there is no such directory.
   - Each file must contain a subset of formalized problems in the corresponding chapter.
     - Each problem should be a `theorem` with name `DF_{Chapter}_{Section}_{Number}`.
-    - Write the natural language statement in LaTeX as a docstring right before the `theorem`.
+    - Write the natural language statement in LaTeX as a docstring right before the `theorem` with the same name.
       - Add a line of `Contributor: <your name>` and separate the statement and this by two newlines.
 
     ```lean
@@ -46,7 +46,7 @@
       ∃ elems : Finset α, ∀ a : α, a ∈ elems
 
     /--
-    Show that $GL_n(F)$ is a finite group if and only if $F$ has a
+    DF_1_4_5 : Show that $GL_n(F)$ is a finite group if and only if $F$ has a
     finite number of elements.
     
     Contributor: John Doe
@@ -63,10 +63,6 @@
     ```
 
     Your lean file won't be checked by CI (Continuous Integration) if you miss this part.
-
-
-
-7. After all CI pass and getting at least two approvements, one of the admins would merge your PR.
 
 ## Tips
 
