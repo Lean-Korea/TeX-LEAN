@@ -16,8 +16,11 @@
 
 3. After cloning, create a new your own branch. 
 
+4. Click the button "Show in Explorer".
 
-click the button "Show in Explorer".
+5. Add or edit files in the explorer. 
+
+6. After editing, click "commit to [your branch name]" to commit. 
 
 
 1. Make a new branch.
