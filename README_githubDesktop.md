@@ -20,16 +20,18 @@
 
 5. Add or edit files in the explorer. 
 
-6. After editing, click "commit to [your branch name]" to commit. 
+6. After editing, click "commit to [your_branch_name]" to commit. 
+
+7. After commiting, click "push origin" to push. 
+
+8. Making a pull request by clicking "Create Pull Request". 
+
+9. After all CI pass and getting at least two approvements, one of the admins would merge your pull request.
 
 
-1. Make a new branch.
+## How to write a file
 
-    ```
-    git checkout -b your_branch_name
-    ```
-
-2. Write a lean file that formalizes a statement of an exercise.
+1. Write a lean file that formalizes a statement of an exercise.
   - Name of each file must be of the form `DF_{Chapter}_{Section}_lean`.
     - **One section for one lean file**. Make one if there is no such file.
   - The file goes into the directory `Formal/DF_{Chapter}`.
@@ -62,20 +64,7 @@
 
     Your lean file won't be checked by CI (Continuous Integration) if you miss this part.
 
-4. Add and commit.
 
-    ```sh
-    git add .
-    git commit -m "your own commit message"
-    ```
-
-5. Push to the remote (this GitHub repository)
-
-    ```sh
-    git push --set-upstream origin your_branch_name
-    ```
-
-6. Make a Pull Request, then you'll find that CI is running (build lean and tex files).
 
 7. After all CI pass and getting at least two approvements, one of the admins would merge your PR.
 
