@@ -6,3 +6,4 @@
 *.synctex.gz
 /.lake
 .DS_Store
+*.pdf
