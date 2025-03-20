@@ -12,7 +12,7 @@
   - Or [install Lean 4](https://docs.lean-lang.org/lean4/doc/quickstart.html) locally.
     - You will also need to install visual studio code to edit Lean 4 source.
 - Use **Git** to commit your Lean 4 work to this repository.
-  - [Github Desktop](https://github.com/apps/desktop) is a user-friendly program that requires no command-line interactions. (Please see https://github.com/Ilkyoo/TeX-LEAN/blob/test_temp/README%20(for%20github%20Desktop).md )
+  - [Github Desktop](https://github.com/apps/desktop) is a user-friendly program that requires no command-line interactions (Please see "README_githubDesktop.md").
   - Or install git locally and use it via command-line interactions.
 
 ## How to contribute
