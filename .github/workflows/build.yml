@@ -1,4 +1,4 @@
-name: Build Lean and TeX files
+name: Build Lean files
 on:
   push:
     branches:
