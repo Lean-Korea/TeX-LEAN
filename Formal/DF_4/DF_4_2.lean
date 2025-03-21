@@ -1,5 +1,6 @@
 import Mathlib.GroupTheory.Index
 
+
 /--
 If $H$ is a finite index subgroup of $G$ of index $n$, then there exists
 a normal subgroup $K$ of $G$ such that $K \leq H$ and $[G : K] \leq n!$.
