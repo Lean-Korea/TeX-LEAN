@@ -1,8 +1,4 @@
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Prime.Defs
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Algebra.Polynomial.Degree.Definitions
-import Mathlib.Algebra.Polynomial.Eval.Defs
+import Mathlib.FieldTheory.Finite.GaloisField
 
 open scoped Polynomial
 
@@ -27,7 +23,7 @@ Show that $p(x) = x^3 + x + 1$ is irreducible in $𝔽_2[x]$.
 
 Contributor: Yeachan Park
 -/
-theorem DF_13_1_3 : Irreducible (X^3 + X + 1 : Polynomial (ZMod 2)) := by
+theorem DF_13_1_3 : Irreducible (X^3 + X + 1 : Polynomial (GaloisField 2 1)) := by
   sorry
 
 /--
