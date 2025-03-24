@@ -7,7 +7,7 @@ import Mathlib.RingTheory.AdjoinRoot
 open Polynomial Complex
 
 /--
-DF_13_2_5 : $p(x) = x^3-2$ and $q(x)=x^3-3$ are irreducible in $ℚ[i]$.
+$p(x) = x^3-2$ and $q(x)=x^3-3$ are irreducible in $\mathbb{Q}[i]$.
 
 Contributor: Yeachan Park
 -/
