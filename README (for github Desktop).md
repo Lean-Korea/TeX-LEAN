@@ -12,7 +12,7 @@
 
 1. Sign in with your github id. 
 
-2. Clone Tex_LEAN repository. (Please check your local path)
+2. Clone Tex-LEAN repository. (Please check your local path)
 
 3. After cloning, create a new your own branch. 
 
