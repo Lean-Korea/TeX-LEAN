@@ -46,7 +46,7 @@
       ∃ elems : Finset α, ∀ a : α, a ∈ elems
 
     /--
-    DF_1_4_5 : Show that $GL_n(F)$ is a finite group if and only if $F$ has a
+    Show that $GL_n(F)$ is a finite group if and only if $F$ has a
     finite number of elements.
     
     Contributor: John Doe
