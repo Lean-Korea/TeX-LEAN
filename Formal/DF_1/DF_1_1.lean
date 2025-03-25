@@ -2,9 +2,8 @@ import Mathlib.Algebra.Group.MinimalAxioms
 import Mathlib.GroupTheory.OrderOfElement
 
 /--
-DF_1_1_15:
-  Prove that $(a_1 a_2 \ldots a_n)^{-1} = a_n^{-1} a_{n - 1}^{-1} \ldots a_1^{-1}$
-  for all $a_1, a_2, \ldots, a_n \in G$.
+$(a_1 a_2 \ldots a_n)^{-1} = a_n^{-1} a_{n - 1}^{-1} \ldots a_1^{-1}$ for every
+$a_1, a_2, \ldots, a_n \in G$, where $G$ is a group.
 
 Contributor: Jihoon Hyun
 -/
@@ -13,9 +12,7 @@ theorem DF_1_1_15 {G : Type*} [Group G] (l : List G) :
   sorry
 
 /--
-DF_1_1_16:
-  Let $x$ be an element of $G$.
-  Prove that $x^2 = 1$ if and only if $|$ is either 1 or 2.
+If $x$ is an element of a group $G$, then $x^2 = 1$ if and only if $|$ is either 1 or 2.
 
 Contributor: Jihoon Hyun
 -/
@@ -25,9 +22,8 @@ theorem DF_1_1_16 {G : Type*} [Group G] {x : G} :
   sorry
 
 /--
-DF_1_1_17:
-  Let $x$ be an element of $G$.
-  Prove that if $|x| = n$ for some positive integer $n$ then $x^{-1} = x^{n - 1}$.
+Let $G$ be a group.
+For some element $x \in G$ which $0 < |x|$, $x^{-1} = x^{|x| - 1}$ holds.
 
 Contributor: Jihoon Hyun
 -/
@@ -36,9 +32,8 @@ theorem DF_1_1_17 {G : Type*} [Group G] {x : G} (h : 0 < orderOf x) :
   sorry
 
 /--
-DF_1_1_18:
-  Let $x$ and $y$ be elements of $G$.
-  Prove that $xy = yx$ if and only if $y^{-1}xy = x$ if and only if $x^{-1}y^{-1}xy = 1$.
+If $x$ and $y$ are elements of a group $G$,
+$xy = yx$ if and only if $y^{-1}xy = x$ if and only if $x^{-1}y^{-1}xy = 1$.
 
 Contributor: Jihoon Hyun
 -/
@@ -51,11 +46,10 @@ theorem DF_1_1_18 {G : Type*} [Group G] (x y : G) :
   sorry
 
 /--
-DF_1_1_19:
-  Let $x \in G$ and let $a, b \in \mathbb{Z}^+$.
-  (a) Prove that $x^{a + b} = x^a x^b$ and $(x^a)^b = x^{ab}$.
-  (b) Prove that $(x^a)^{-1} = x^{-a}$.
-  (c) Establish part (a) for arbitrary integers $a$ and $b$ (positive, negative or zero).
+Let $x$ be an element of a group $G$.
+(a) $x^{a + b} = x^a x^b$ and $(x^a)^b = x^{ab}$ for every positive integer $a$ and $b$.
+(b) For every positive integer $a$, $(x^a)^{-1} = x^{-a}$.
+(c) $x^{a + b} = x^a x^b$ and $(x^a)^b = x^{ab}$ for every integer $a$ and $b$.
 
 Contributor: Jihoon Hyun
 -/
@@ -72,8 +66,7 @@ theorem DF_1_1_19_c {G : Type*} [Group G] {x : G} {a b : ℤ} :
   sorry
 
 /--
-DF_1_1_20:
-  For $x$ an element in $G$ show that $x$ and $x^{-1}$ have the same order.
+$x$ and $x^{-1}$ have the same order for every element $x$ of a group $G$.
 
 Contributor: Jihoon Hyun
 -/
@@ -82,9 +75,8 @@ theorem DF_1_1_20 {G : Type*} [Group G] {x : G} :
   sorry
 
 /--
-DF_1_1_21:
-  Let $G$ be a finite group and let $x$ be an element of $G$ of order $n$.
-  Prove that if $G$ is odd, then $x = (x^2)^k$ for some integer $k ≥ 1$.
+If $G$ is a finite group and $|G|$ is odd,
+then for any $x \in G$, $x = (x^2)^k$ for some integer $1 ≤ k$.
 
 Contributor: Jihoon Hyun
 -/
@@ -93,9 +85,8 @@ theorem DF_1_1_21 {G : Type*} [Group G] [Fintype G] (h : Odd (Fintype.card G)) {
   sorry
 
 /--
-DF_1_1_22:
-  If $x$ and $g$ are elements of the group $G$, prove that $|x| = |g^{-1}xg|$.
-  Deduce that $|ab| = |ba|$ for all $a, b \in G$.
+If $x$ and $g$ are elements of a group $G$, then $|x| = |g^{-1}xg|$.
+Also, $|ab| = |ba|$ for all $a, b \in G$.
 
 Contributor: Jihoon Hyun
 -/
@@ -108,10 +99,8 @@ theorem DF_1_1_22_2 {G : Type*} [Group G] {a b : G} :
   sorry
 
 /--
-DF_1_1_23:
-  Suppose $x \in G$ and $|x| = n < \infty$.
-  If $n = st$ for some positive integers $s$ and $t$,
-  prove that $|x^s| = t$.
+Let $G$ be a group and $x$ be an element of $G$ with $|x| = n < \infty$.
+If $n = st$ for some positive integers $s$ and $t$, $|x^s| = t$ holds.
 
 Contributor: Jihoon Hyun
 -/
@@ -122,11 +111,9 @@ theorem DF_1_1_23
   sorry
 
 /--
-DF_1_1_24:
-  If $a$ and $b$ are \textit{commuting elements} of $G$,
-  prove that $(ab)^n = a^n b^n$ for all $n \in \mathbb{Z}$.
-  [Do this by induction for positive $n$ first.]
-  
+If $a$ and $b$ are \textit{commuting elements} of a group $G$,
+$(ab)^n = a^n b^n$ for every $n \in \mathbb{Z}$.
+
 Contributor: Jihoon Hyun
 -/
 theorem DF_1_1_24 {G : Type*} [CommGroup G] (a b : G) (n : ℤ) :
@@ -134,8 +121,7 @@ theorem DF_1_1_24 {G : Type*} [CommGroup G] (a b : G) (n : ℤ) :
   sorry
 
 /--
-DF_1_1_25:
-  Prove that if $x^2 = 1$ for all $x \in G$ then $G$ is abelian.
+Group $G$ is abelian if $x^2 = 1$ for every $x \in G$.
 
 Contributor: Jihoon Hyun
 -/
@@ -144,11 +130,10 @@ def DF_1_1_25 {G : Type*} [Group G] (h : ∀ x : G, x ^ 2 = 1) :
   mul_comm := sorry
 
 /--
-DF_1_1_26:
-  Assume $H$ is a nonempty subset of $(G, \bigstar)$ which is closed under the binary operation on
-  $G$ and is closed under inverses, i.e., for all $h$ and $k \in H$, $hk$ and $h^{-1} \in H$.
-  Prove that $H$ is a group under the operation $\bigstar$ restricted to $H$
-  (such a subset $H$ is called a \textit{subgroup} of $G$).
+Assume $H$ is a nonempty subset of a group $(G, \bigstar)$ which is closed under the binary
+operation on $G$ and is closed under inverses,
+i.e., for all $h$ and $k \in H$, $hk$ and $h^{-1} \in H$ holds.
+Then $H$ is also a group under the operation $\bigstar$ restricted to $H$.
 
 Contributor: Jihoon Hyun
 -/
@@ -159,9 +144,7 @@ def DF_1_1_26
   sorry
 
 /--
-DF_1_1_27:
-  Prove that if $x$ is an element of the group $G$ then $\{x^n | n \in \mathbb{Z}\}$ is a subgroup
-  (cf. the preceding exercise) of $G$ (called the \textit{cyclic subgroup} of $G$ generated by $x$).
+If $x$ is an element of a group $G$ then $\{x^n | n \in \mathbb{Z}\}$ is a subgroup of $G$.
 
 Contributor: Jihoon Hyun
 -/
@@ -170,15 +153,13 @@ def DF_1_1_27 {G : Type*} [Group G] (g : G) :
   sorry
 
 /--
-DF_1_1_28:
-  Let $(A, \bigstar)$ and $(B, \diamond)$ be groups and let $A \times B$ be their direct product
-  (as defined in Example 6).
-  Verify all the group axioms for $A \times B$:
-  (a) prove that the associative law holds:
-      for all $(a_i, b_i) \in A \times B$, $i = 1, 2, 3$
-      $(a_1, b_1) [(a_2, b_2) (a_3, b_3)] = [(a_1, b_1) (a_2, b_2)] (a_3, b_3)$,
-  (b) prove that $(1, 1)$ is the identity of $A \times B$, and
-  (c) prove that the inverse of $(a, b)$ is $(a^{-1}, b^{-1}$.
+Let $(A, \bigstar)$ and $(B, \diamond)$ be groups and let $A \times B$ be their direct product
+with a binary operation $(a_1, b_1) (a_2, b_2) = (a_1 \bigstar a_2, b_1 \diamond b_2)$.
+Then $A \times B$ satisfies all group axioms:
+(a) For all $(a_i, b_i) \in A \times B$, $i = 1, 2, 3$
+    $(a_1, b_1) [(a_2, b_2) (a_3, b_3)] = [(a_1, b_1) (a_2, b_2)] (a_3, b_3)$,
+(b) $(1, 1)$ is the identity of $A \times B$, and
+(c) The inverse of $(a, b)$ is $(a^{-1}, b^{-1})$.
 
 Contributor: Jihoon Hyun
 -/
@@ -193,8 +174,7 @@ def DF_1_1_28_a {A B : Type*} [Group A] [Group B] :
     (sorry /- (c) -/)
 
 /--
-DF_1_1_29:
-  Prove that $A \times B$ is an abelian group if and only if both $A$ and $B$ are abelian.
+$A \times B$ is an abelian group if and only if both $A$ and $B$ are abelian.
 
 Contributor: Jihoon Hyun
 -/
@@ -204,9 +184,8 @@ theorem DF_1_1_29 {A B : Type*} [Group A] [Group B] :
   sorry
 
 /--
-DF_1_1_30:
-  Prove that the elements $(a, 1)$ and $(1, b)$ of $A \times B$ commute and deduce that the order
-  of $(a, b)$ is the least common multiple of $|a|$ and $|b|$.
+The elements $(a, 1)$ and $(1, b)$ of $A \times B$ commute.
+Also, the order of $(a, b)$ is the least common multiple of $|a|$ and $|b|$.
 
 Contributor: Jihoon Hyun
 -/
@@ -215,11 +194,7 @@ theorem DF_1_1_30 {A B : Type*} [Group A] [Group B] (a : A) (b : B) :
   sorry
 
 /--
-DF_1_1_31:
-  Prove that any finite group $G$ of even order contains an element of order 2.
-  [Let $t(G)$ be the set $\{g \in G | g ≠ g^{-1}\}$.
-  Show that $t(G)$ has an even number of elements and every nonidentity element of $G - t(G)$ has
-  order 2.]
+Every finite group $G$ of even order contains an element of order 2.
 
 Contributor: Jihoon Hyun
 -/
@@ -228,10 +203,9 @@ theorem DF_1_1_31 {G : Type*} [Group G] [Fintype G] (h : Even (Fintype.card G)) 
   sorry
 
 /--
-DF_1_1_32:
-  If $x$ is an element of finite order $n$ in $G$, prove that the elements
-  $1, x, x^2, \ldots, x^{n - 1}$ are all distinct.
-  Deduce that $|x| \leq |G|$.
+If $x$ is an element of finite order $n$ in a group $G$,
+$1, x, x^2, \ldots, x^{n - 1}$ are all distinct.
+This also implies that $|x| \leq |G|$.
 
 Contributor: Jihoon Hyun
 -/
@@ -240,10 +214,9 @@ theorem DF_1_1_32 {G : Type*} [Group G] [Fintype G] (x : G) :
   sorry
 
 /--
-DF_1_1_33:
-  Let $x$ be an element of finite order $n$ in $G$.
-  (a) Prove that if $n$ is odd then $x^i \neq x^{-i}$ for all $i = 1, 2, \ldots, n - 1$.
-  (b) Prove that if $n = 2k$ and $1 \leq i < n$ then $x^i = x^{-i}$ if and only if $i = k$.
+Let $x$ be an element of finite order $n$ in a group $G$.
+(a) If $n$ is odd then $x^i \neq x^{-i}$ for all $i = 1, 2, \ldots, n - 1$.
+(b) If $n = 2k$ and $1 \leq i < n$ then $x^i = x^{-i}$ if and only if $i = k$.
 
 Contributor: Jihoon Hyun
 -/
@@ -260,9 +233,8 @@ theorem DF_1_1_33_b
   sorry
 
 /--
-DF_1_1_34:
-  If $x$ is an element of infinite order in $G$, prove that the elements $x^n, n \in \mathbb{Z}$
-  are all distinct.
+If $x$ is an element of infinite order in a group $G$,
+the elements $x^n, n \in \mathbb{Z}$ are all distinct.
 
 Contributor: Jihoon Hyun
 -/
@@ -271,12 +243,8 @@ theorem DF_1_1_34 {G : Type*} [Group G] {x : G} (h : orderOf x = 0) :
   sorry
 
 /--
-DF_1_1_35:
-  If $x$ is an element of finite order $n$ in $G$, use the Division Algorithm to show that
-  \textit{any} integral power of $x$ equals one of the elements in the set
-  $\{1, x, x^2, \ldots, x^{n - 1}\}$
-  (so these are all the distinct elements of the cyclic subgroup (cf. Exercise 27 above) of $G$
-  generated by $x$).
+If $x$ is an element of finite order $n$ in $G$, then \textit{any} integral power of $x$ equals
+one of the elements in the set $\{1, x, x^2, \ldots, x^{n - 1}\}$.
 
 Contributor: Jihoon Hyun
 -/
