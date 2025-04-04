@@ -26,9 +26,9 @@
     ```
 
 4. Write a lean file that formalizes a statement of an exercise.
-  - One directory for each chapter. The file goes into the directory `Formal/Chapter{number}`. Make one if it does not exist.
-  - One .lean file for each section. Name each file as `Formal/Chapter{number}/Section{number}`.
-      - e.g. `Formal/Chapter1/Section4.lean`
+  - One directory for each chapter. The file goes into the directory `Formal/DF_{Chapter}`. Make one if it does not exist.
+  - One .lean file for each section. Name each file as `Formal/DF_{Chapter}/DF_{Chapter}_{Section}.lean`.
+      - e.g. `Formal/DF_1/DF_1_4.lean`
   - One theorem for each problem. Each problem should be a `theorem` with name `DF_{Chapter}_{Section}_{Number}`.
 
     ```lean
@@ -36,13 +36,13 @@
       ∃ elems : Finset α, ∀ a : α, a ∈ elems
 
     /--
-    Show that $GL_n(F)$ is a finite group if and only if $F$ has a
+    Let $k$ be a field. Then $GL_n(k)$ is a finite group if and only if $k$ has a
     finite number of elements.
     
     Contributor: John Doe
     -/
     theorem DF_1_4_5 {n : ℕ} {k : Type} [Field k] :
-        IsFinite (Matrix.GeneralLinearGroup (Fin n) k) ↔ IsFinite k := by
+        DF_1_4_5_IsFinite (Matrix.GeneralLinearGroup (Fin n) k) ↔ DF_1_4_5_IsFinite k := by
       sorry
     ```
     - Write the natural language statement in LaTeX as a docstring right before the `theorem`.
@@ -54,7 +54,7 @@
 5. Import any newly created lean file to `Formal/DF.lean`:
 
     ```lean
-    import Formal.Chapter1.Section4.lean
+    import Formal.DF_1.DF_1_4
     ```
 
     Your lean file won't be checked by CI (Continuous Integration) if you miss this part.
