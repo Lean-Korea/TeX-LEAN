@@ -19,13 +19,14 @@
 
 1. Clone this repository.
 2. If using local Lean 4 installation, run `lake exe cache get` at project root to get pre-compiled mathlib4 cache.
-3. Make a new branch.
+   (Please be patient, this will probably take some time - maybe 5 minutes or so.)
+4. Make a new branch.
 
     ```
     git checkout -b your_branch_name
     ```
 
-4. Write a lean file that formalizes a statement of an exercise.
+5. Write a lean file that formalizes a statement of an exercise.
   - One directory for each chapter. The file goes into the directory `Formal/DF_{Chapter}`. Make one if it does not exist.
   - One .lean file for each section. Name each file as `Formal/DF_{Chapter}/DF_{Chapter}_{Section}.lean`.
       - e.g. `Formal/DF_1/DF_1_4.lean`
@@ -46,7 +47,8 @@
       sorry
     ```
     - Write the natural language statement in LaTeX as a docstring right before the `theorem`.
-      - Add a line of `Contributor: <your name>` and separate the statement and this by two newlines.
+      - Add a line of `Contributor: <your name>` and separate the statement and this by two newlines ('\n').
+        (This means hit enter twice.)
     - Any extra definitions or lemmas required for each problem can be made.
       - Such definitions/lemmas should be prefixed with `DF_{Chapter}_{Section}_{Number}_` (including extra underline).
       - Label all non-problem statement as a `lemma`.
