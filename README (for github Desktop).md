@@ -31,4 +31,4 @@
 
 ## How to write a file
 
-Please take a look at the main README.md file (https://github.com/Lean-Korea/TeX-LEAN/blob/main/README.md).
+Please take a look at the main [README.md](https://github.com/Lean-Korea/TeX-LEAN/blob/main/README.md).
